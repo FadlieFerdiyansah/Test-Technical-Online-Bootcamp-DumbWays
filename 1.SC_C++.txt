@@ -1,0 +1,122 @@
+#include <iostream>
+using namespace std;
+
+int total_harga,diskon;
+
+
+
+int harga_barang(int kualitas, int quantity){
+   int harga;
+   if(kualitas == 1){
+       
+        if(quantity > 10){
+            harga = 2500 * quantity;
+            return harga;
+        }else if(quantity <= 10){
+         return harga = 3000 * quantity;   
+        }
+      
+   }else if(kualitas == 2){
+    
+    if(quantity > 5){
+            harga = 3500 * quantity;
+            diskon = harga*50/100;
+            return diskon;
+        }else if(quantity <= 5){
+         return total_harga = 3500 * quantity; 
+        }
+       
+   }else if(kualitas == 3){
+    
+    if(quantity > 0){
+            harga = 5000 * quantity;
+            return harga;
+        }
+       
+   }else{
+        cout << "Yang anda masukan tidak ada \n";
+   }
+   
+}
+
+int total(int kualitas, int quantity){
+   
+   if(kualitas == 1){
+
+         if(quantity > 10){
+            total_harga = 3000 * quantity;
+            return total_harga;
+        }else{
+         harga_barang(kualitas,quantity);
+        }   
+      
+   }else if(kualitas == 2){
+        
+        if(quantity > 5){
+            return total_harga = 3500 * quantity; 
+        }else{
+            harga_barang(kualitas,quantity);
+        }
+        
+   }else if(kualitas == 3){
+       return total_harga = 5000 * quantity;
+   }
+   
+}
+
+int main(){
+	
+	int kualitas,quantity,harga,potongan;;
+	cout << "====================================\n";
+	cout << "\t1. Kualitas Barang A" << "\n";
+	cout << "\t2. Kualitas Barang B" << "\n";
+	cout << "\t3. Kualitas Barang C" << "\n";
+	cout << "====================================\n";
+	
+	cout << "Pilih kualitas barang dengan memasukan angka 1/2/3 = ";
+	cin >> kualitas;
+	
+	switch(kualitas){
+	 case 1: cout << "Pilihan Anda : 1 \n\t: Kualitas Barang A \n\t: Harga 3000\n";break;
+	 case 2: cout << "Pilihan Anda : 2 \n\t: Kualitas Barang B \n\t: Harga 3500\n";break;
+	 case 3: cout << "Pilihan Anda : 3 \n\t: Kualitas Barang C \n\t: Harga 5000\n";break;
+	 default:
+	    cout << "Pilihan yang anda masukan tidak ada \n";
+	}
+	
+	
+	if(kualitas == 1 || kualitas == 2 || kualitas == 3){
+	 
+	 cout << "Masukan Quantity = ";
+	cin >> quantity;
+	
+	
+	cout << "Total Harga Barang : " << total(kualitas,quantity) << "\n";
+	
+	
+	if(kualitas == 1){
+	    
+	    if(quantity > 10){
+             harga = 2500 * quantity;
+             total_harga = 3000 * quantity;
+             potongan = total_harga - harga ;
+             cout << "Potongan anda sebesar : " << potongan << "\n";  
+	    }else{
+            potongan = 0 ;
+            cout << "Potongan anda sebesar : " << potongan << "\n";    
+	    }
+	}else if(kualitas == 2){
+	    if(quantity > 5){
+	        harga = harga_barang(kualitas,quantity);
+	        potongan = harga - 50/100;   
+	        cout << "Potongan anda sebesar : " << potongan << '\n'; 
+	    }else{
+	        potongan = 0 ;
+            cout << "Potongan anda sebesar : " << potongan << "\n"; 
+	    }
+	}
+	
+	cout << "Total yang harus dibayar : " << harga_barang(kualitas,quantity);   
+	    
+	}
+}
