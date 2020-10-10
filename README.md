@@ -1,13 +1,15 @@
 # Test-Technical-Online-Bootcamp-DumbWays
-Software yang dipakan untuk web
+  Text IDE Online 
+ ~cpp.sh 
+ ~MyProject => 1. cpp.sh/52bhm
+ 
+Query
+4. A
+ ~ MySQL-Front
+ 
+Software yang dipakai untuk web
+4. B
   ~Chrome
   ~VsCode
   ~Xampp
-  ~Mysql-Front
-  
-Text IDE Online 
- ~cpp.sh 
- ~MyProject => cpp.sh/52bhm
- 
-Query
- ~ MySQL-Front
+  ~MySQL-Front
